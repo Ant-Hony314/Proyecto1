@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C0 en complejos</title>
+    <link rel="stylesheet" href="../math.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+
+</head>
+<body>
+    <h1>La continuidad en los complejos</h1>
+
+    <a href="VC.html">Página anterior</a>
+    
+    <p>
+        Similarmente a como está definido tradicionalmente en $\mathbb{R}$, el ser continuo en
+        los complejos implica la existencia de un límite.
+    </p>
+
+    <p>
+        Se dice que una función $f$ es continua en $z_0$ si $$\lim_{z\to z_0} f(z)=f(z_0)$$
+        es decir, si para todo $\varepsilon>0$ existe un $\delta>0$
+        tal que $$|f(z)-f(z_0)|<\varepsilon\hspace{10pt} \text{si}\hspace{10pt} 0<|z-z_0|<\delta.$$
+        De esta forma, decimos que una función es continua en una región $A$ si lo es en todos los puntos de $A$.
+    </p>
+
+    <p>
+        No se pretende demostrar, pero se siguen algunas propiedades que ya
+        conocemos de funciones continuas en $\mathbb{R}$, es decir, en un punto
+        $z_0$:
+    </p>
+
+    <ul>
+        <li>La suma de continuas es continua.</li>
+        <li>El producto de continuas es continua.</li>
+        <li>El cociente de continuas es continua, siempre que el denominador no se anule en aquel punto $z_0$.</li>
+        <li>La composición de continuas es continua.</li>
+        <li>Los polinomios son continuos en todo $\mathbb{C}$.</li>
+    </ul>
+
+    <p>
+        En la sección de <a href="limites.html">límites</a> vimos que si el límite de una función existe en un punto $z_0$ entonces
+        el límite de sus componentes tambíen existen en dicho punto. De aquella afirmación obtenemos que si una función es
+        continua en $z_0$, entonces sus componentes también lo son en $z_0$.
+    </p>
+
+    <p>
+        Una propiedad que "heredan" las funciones complejas del analisis real es que si
+        una función $f(z)$ es continua en un conjunto $A$ cerrado y acotado, entonces $|f(z)|$
+        alcanza un máximo. Es decir, existe un $M\geq0$ tal que $\forall z\in A$ $$ |f(z)|\leq M. $$
+
+        El que una función compleja sea continua en un cerrado y acotado implica que es uniformemente
+        continua también. Caray caray.
+    </p>
+</body>
+</html>

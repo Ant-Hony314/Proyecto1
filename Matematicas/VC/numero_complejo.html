@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Defición</title>
+    <link rel="stylesheet" href="../math.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+
+    <h1>Definición de un número complejo</h1>
+
+    <p>
+        <a href="VC.html">Página anterior</a>
+    </p>
+
+    <p>
+        Se puede definir como un par ordenado o una suma $$z=(x,y)=x+iy$$donde \(x\) y \(y\) son números reales e \(i\)
+        es el número imaginario puro $(0,1)$. Se define como la parte real y parte imaginaria de un número complejo como:
+        $$\text{Re}\ z=x,\ \text{Im}\ z=y.$$La suma $z_1+z_2$ y el producto $z_1z_2$ de dos números complejos $z_1=(x_1,y_1)$ y $z_2=(x_2,y_2)$ se definen por las siguientes ecuaciones: $$\begin{gather}
+        (x_1,y_1)+(x_2,y_2)=(x_1+x_2, y_1+y_2), \\
+        (x_1,y_1)(x_2,y_2)=(x_1x_2-y_1y_2,\ y_1x_2+x_1y_2).
+        \end{gather}$$o $$\begin{gather}
+        (x_1+iy_1)+(x_2+iy_2)=(x_1+x_2)+i(y_1+y_2), \\
+        (x_1+iy_1)(x_2+iy_2)=(x_1x_2-y_1y_2)+ i(y_1x_2+x_1y_2).
+        \end{gather}$$
+        Nota que, con el convenio $z^2=zz,\ z^3=zz^2$, se tiene que $$i^2=-1.$$ 
+    </p>
+
+    <h1>Forma polar</h2>
+
+    <p>
+        Dado que $x=r\cos\theta$ e $y=r\sin\theta$, $z$ puede ser expresado en forma polar como
+        $$z=r(\cos\theta+i\sin\theta).$$Donde $r=|z|$ y $\theta$ es el argumento de $z$ que denotamos
+        como $\theta=\arg z$. Nota que $\tan\theta=\frac{y}{x}$. En general, se puede escribir a $z$
+        como $$z=r[\cos(\theta+2k\pi)+i\sin(\theta+2k\pi)],\ \text{con }k\in\mathbb{Z}.$$
+        El <b>valor principal</b> de $\arg z$, denotado $\text{Arg}\ z$, se definie como el único valor
+        de $\arg z$ tal que $-\pi<\arg z\leq\pi$.
+        Se tiene una importante propiedad de los los argumentos, y es que $$\arg (z_1z_2)=\arg z_1+\arg z_2.$$
+        Esto ultimo no se cumple si se cambia $\arg z$ por $\text{Arg}\ z$. La multiplicación de complejos en
+        la forma polar está dada por $$z_1z_2=r_1r_2[\cos(\theta_1+\theta_2)+i\sin(\theta_1+\theta_2)].$$El inverso de un complejo en su forma polar queda como $$z^{-1}=\frac{1}{r}[\cos(-\theta)+i\sin(-\theta)]$$Así, sean $z_1,z_2$ dos números complejos no nulos, se tiene que $$\frac{z_1}{z_2}=\frac{r_1}{r_2}[\cos(\theta_1-\theta_2)+i\sin(\theta_1-\theta_2)],$$lo que da pie a la siguiente propiedad: $$\arg \left( \frac{z_1}{z_2} \right)=\arg z_1-\arg z_2.$$
+    </p>
+
+    <h1>Forma exponencial</h3>
+
+    <p>
+        La <b>Formula de Euler</b> establece que $$e^{i\theta}=\cos\theta+i\sin\theta$$Esto nos da una
+        forma más compata de expesar $z$ de <b>forma exponencial:</b>$$z=re^{i\theta}=r\exp(i\theta).$$
+        Que en general, se escribe como $$z=re^{i(\theta+2k\pi)}=r\exp[i(\theta+2k\pi)],\ \text{con }k\in\mathbb{Z}.$$
+        He aqui varias identidades/propiedades:$$\begin{gather}
+        e^{i\theta_1}e^{i\theta_2}=e^{i(\theta_1+\theta_2)},\\[10pt]
+        e^{i\theta}e^{-i\theta}=1\Rightarrow1/e^{i\theta}=e^{-i\theta},\\[10pt]
+        z^{-1}=\frac{1}{r}e^{i(-\theta)}=\frac{1}{r}e^{-i\theta},\\[10pt]
+        z_1z_2=r_1r_2\exp[i(\theta_1+\theta_2)],\\[10pt]
+        \frac{z_1}{z_2}=\frac{r_1}{r_2}\exp[i(\theta_1-\theta_2)].
+        \end{gather}$$De todo esto podemos afirmar lo siguiente: <b>dos número complejos no
+        nulos $z_1$, $z_2$ son iguales si y solo si $r_1=r_2$ y $\theta_1=\theta_2+2k\pi$, donde $k$ es un entero.</b>
+    </p>
+
+</body>
+</html>

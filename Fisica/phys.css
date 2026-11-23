@@ -1,0 +1,22 @@
+body{
+    background-color: #bdc8ff;
+    margin: 50pt 200pt;
+}
+
+figure {
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: black;
+  text-align: center;
+}

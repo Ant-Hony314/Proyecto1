@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Potencias y raíces</title>
+    <link rel="stylesheet" href="../math.css">
+    <script>
+        MathJax = {
+            tex: {
+                inlineMath: [['$', '$'], ['\\(', '\\)']],
+                displayMath: [['$$', '$$'], ['\\[', '\\]']]
+            }
+        };
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h1>Potencias y raíces</h1>
+
+    <p>
+        <a href="VC.html">Página anterior</a>
+    </p>
+
+    <p>
+        Las potencias enteras de un número complejo no nulo $z=re^{i\theta}$ vienen dadas
+        por $$z^k=r^ke^{ik\theta}\ \text{con }k\in\mathbb{Z}.$$Nota que si $r=1$, la expresión
+        anterior se convierte en $$(e^{i\theta})^k=e^{ik\theta}.$$Cuando se expresa en la
+        forma $$(\cos\theta+i\sin\theta)^k=\cos k\theta+i\sin k\theta$$se conoce como la <b>fórmula de De Moivre</b>.
+    </p>
+
+
+    <h2>Raíces de la unidad</h2>
+
+    <p>
+        Sea la ecuación $z^n=1$, buscamos valores de $r$ y $\theta$ tales que $(re^{i\theta})^n=1$,
+        osea $$r^ne^{in\theta}=1e^{i0}.$$Esto quiere decir que $r^n=1$ y $n\theta=0+2k\pi$, con $k$ un entero
+
+        Por tanto, $r=1$ y $\theta=2k\pi/n$; se deduce que los números complejos
+        $$z=\exp \left( i\frac{2k\pi}{n} \right),\ \text{con }k\in\mathbb{Z}$$
+        son las raíces $n$-ésimas de la unidad.
+
+        Si escribimos $$\omega_n=\exp\left( i\frac{2\pi}{n} \right)$$ y elevamos a la $k$:
+        $$\omega_n^k=\exp\left( i\frac{2k\pi}{n} \right)$$vemos que las distintas raíces $n$-ésimas
+        de la unidad son simplemente $$1,\omega_n,\omega_n^2,\dotsc,\omega_n^{n-1}.$$
+    </p>
+
+    <h1>Raíces n-ésimas</h1>
+
+    <p>
+        Las raíces $n$-ésimas de cualquier número complejo no nulo $z_0=r_0\exp(i\theta_0)$
+        (osea, todos los números tales que $z^n=z_0$) son los números
+        $$c_k=\sqrt[n]{r_0}\exp \left[ i \left( \frac{\theta_0}{n}+\frac{2k\pi}{n} \right) \right],\ \text{con }k\in\mathbb{Z}.$$
+        Si $c$ es cualquier raíz $n$-ésima particular de $z_0$, el conjunto de todas las raíces
+        $n$-ésimas se puede expresar $$c,c\omega_n,c\omega_n^2,\dotsc,c\omega_n^{n-1},$$
+        donde $\omega_n=\exp(i2\pi/n)$. Esto es así porque el producto de cualquier número
+        complejo no nulo por $\omega_m$ corresponde a aumentar su argumento en $2\pi/n$.
+
+        Denotaremos por $z_0^{1/n}$ el conjunto de las raíces $n$-ésimas de un número compleno no nulo $z_0$.
+    </p>
+</body>
+</html>

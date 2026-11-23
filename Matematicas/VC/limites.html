@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Límites!</title>
+    <link rel="stylesheet" href="../math.css">
+    <script defer src="../../latex.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h1>Límites!</h1>
+
+    <p>
+        <a href="VC.html">Página anterior</a>
+    </p>
+
+    <p>
+        Los límites en variable compleja no son muy distintos de límites que
+        uno trabaja en $\mathbb{R}^2$, de hecho, considero conviente pensarlos
+        de esa forma, pues facilita la interpretación.
+    </p>
+
+    <p>
+        El límite de una función $f(z)=w$ cuando $z\to z_0$ es como es de esperarse,
+        un número que se acerca una distancia arbitraria a un $w_0$, siempre y cuando
+        se escoja un $\delta$-entorno punteado adecuado.
+    </p>
+
+    <p>Osea que, sea $f(z):A\subseteq\mathbb{C}\to\mathbb{C}$, el $\displaystyle\lim_{z\to z_0} f(z)=w$ si $\forall\varepsilon>0,\ \exists\delta>0$ tal que
+        $$|f(z)-w_0|<\varepsilon\hspace{10pt} \text{si}\hspace{10pt} z\in A\ \text{y}\ 0<|z-z_0|<\delta.$$
+        Una definición equivalente es la siguiente:
+        Sea $f(z)=u(x,y) +iv(x,y)$, $z_0=x_0+iy_0$ y $w_0=u_0+iv_0$, entonces $$\lim_{z\to z_0}f(z)=w_0$$
+        si y solo si $$ \lim_{(x,y)\to(x_0,y_0)} u(x,y)=u_0 $$ y
+        $$ \lim_{(x,y)\to(x_0,y_0)} v(x,y)=v_0 $$
+
+        De este teorema se puede obtener los siguientes resultados (Churchill, pp.43): si $\displaystyle\lim_{z\to z_0} f(z)=A$ y $\displaystyle\lim_{z\to z_0} g(z)=B$
+        entonces
+    </p>
+
+    <ul>
+        <li>$\displaystyle\lim_{z\to z_0} f(z)+g(z)=A+B$</li>
+        <li>$\displaystyle\lim_{z\to z_0} f(z)g(z)=AB$</li>
+        <li>si $B\neq0$, $\displaystyle\lim_{z\to z_0} \frac{f(z)}{g(z)}=\frac{A}{B}$</li>
+        <li>$\displaystyle\lim_{z\to z_0} |f(z)|=|A|$ (el regreso es falso)</li>
+    </ul>
+
+    <p>
+        Por ultimo, cabe resaltar que el $\displaystyle\lim_{z\to z_0} z=z_0$ y por inducción se deduce que $\displaystyle\lim_{z\to z_0} z^n=z_0^n$,
+        además de que $\displaystyle\lim_{z\to z_0} c=c$, por ende, para un polinomio complejo de grado $n$
+        $$ P(z)=a_0+a_1z^1+\dotsb+a_nz^n $$ se obtiene que $$ \lim_{z\to z_0} P(z)=P(z_0). $$
+    </p>
+</body>
+</html>

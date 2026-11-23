@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Áreas</title>
+    <link rel="stylesheet" href="../math.css">
+    <script defer src="../../latex.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-mml-chtml.js"></script>
+</head>
+<body>
+    <h1>Cómo calcular áreas en $\mathbb{R}^2$</h1>
+
+    <p>
+        <a href="introCalculoIV.html">Página anterior</a>
+    </p>
+
+    <p>
+        Existe uno que otro método (que yo conozco) para calcular el área de alguna figura cuya forma sea
+        algo extraña, o de plano, una porqueria.
+    </p>
+
+    <p>
+        Suponte entonces que tenemos una región $D$ en el plano. Si esta es Jordan medible,
+        no es difícil ver que $$\text{Area}(D)=\int_{D}1 $$ De esta conjetura, hay dos
+        caminos que podemos tomar, uno dado por el Teorema de Green y otro dado por el Teorema de cambio
+        de variable.
+    </p>
+
+    <h2>Por cambio de variable</h2>
+
+    <p>
+        En el <a href="cambiodevariable.html">Teorema de cambio de variable</a> tenemos una función
+        $\phi$ que hace cosas, entre ellas, transformar un rectangulo $\Omega$ en una región $D$,
+        es decir $\phi(\Omega)=D$. Entonces, de la ecuación anterior y por el Teorema del cambio
+        de variable, se tiene que $$\text{Area}(D)=\text{Area}(\phi(\Omega))=\int_{\phi(\Omega)}1
+        =\int_{\Omega}|\det(D\phi)| $$ $$\therefore \text{Area}(D)=\int_{\Omega}|\det(D\phi)|. $$
+
+        En el caso particular de que la reguón $D$ sea la encerrada por una curva en coordenadas
+        polares $r(\theta)$, con $\theta_0<\theta<\theta_1$ entonces
+        $$\text{Area}(D)=\int_{\theta_0}^{\theta_1} \frac{r(\theta)^2}{2}d\theta. $$
+    </p>
+
+    <h2>Por teorema de Green</h2>
+
+    <p>
+        En el Teorema de Green se ocupa un campo vectorial conveniente, cuya expresión es $f(x,y)
+        =(\frac{-y}{2},\frac{x}{2})$. Así pues, nota que $$\frac{\partial Q}{\partial x}-\frac{\partial P}
+        {\partial y}=\frac{1}{2}- \left(-\frac{1}{2}\right)=1. $$ Entonces, para nuestra curvita $\alpha$
+        que parametriza la frontera de $D$, se tiene que $$\int_{\alpha}f=\int_{D}\frac{\partial Q}{\partial x}
+        -\frac{\partial P}{\partial y}=\int_{D}1=\text{Area}(D). $$ Así pues, se tiene que
+        $$\int_{\alpha}f=\int_{\alpha} \frac{-y}{2}dx+\frac{x}{2}dy $$
+        $$=\frac{1}{2}\int_{a}^{b}-\alpha_2(t)\alpha_1'(t)+\alpha_1(t)\alpha_2'(t) dt$$
+        $$=\frac{1}{2}\int_{a}^{b} \det \begin{pmatrix} \alpha_1(t) & \alpha_1'(t) \\ \alpha_2(t) & \alpha_2'(t)
+        \end{pmatrix} dt $$
+        $$\therefore \text{Area}(D)=\frac{1}{2}\int_{a}^{b} \det \begin{pmatrix} \alpha_1(t) & \alpha_1'(t) \\ 
+        \alpha_2(t) & \alpha_2'(t) \end{pmatrix} dt $$
+        Si uno hace las cuentitas para el caso en donde $D$ es una área encerrada por una curva en polares $r(\theta)$,
+        se obtiene el mismo resultado que con el Teorema de cambio de variable.
+    </p>
+</body>
+</html>
