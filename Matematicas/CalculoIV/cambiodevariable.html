@@ -23,8 +23,59 @@
 
     <p>
         Sea $ \Omega=[a,b]\times[c,d] $ y sea $\phi:\Omega\to\mathbb{R}^2$ de clase $C^2$ en $\Omega$ inyectiva
-        tal que para todo $x\in\Omega$ se tiene que $\det (D_x\phi)\neq0$. Sea $f:\phi(\Omega\to\mathbb{R})$ continua,
+        tal que para todo $x\in\Omega$ se tiene que $\det (D_x\phi)\neq0$. Sea $f:\phi(\Omega)\to\mathbb{R}$ continua,
         entonces $$ \int_{\phi(\Omega)} f=\int_{\Omega} (f\circ\phi)|\det (D\phi) |. $$
     </p>
+
+    <h2>El Teorema de cambio de variable general</h2>
+
+    <p>
+        Este es la generalización del teorema anterior, es decir, para funciones $f:\mathbb{R}^n\to\mathbb{R}$. El
+        Paez lo describe de la siguiente forma:
+    </p>
+
+    <p>
+        <i>"Sean $A\subset\mathbb{R}^n$, $f:A\subset\mathbb{R}^n\to\mathbb{R}$ continua en $A$, $g:\Omega\subset
+        \mathbb{R}^n\to\mathbb{R}^n$ de clase $C^1$ en $\Omega$ y $B\subset\Omega$ Jordan-medible tal que
+        $\bar{B}\subset\Omega$. Si:</i>
+    </p>
+
+    <ol>
+        <li><i>$g$ es inyectiva en $B\setminus C$, con $C\subset B$ un conjunto de medida de Jordan cero,</i></li>
+        <li><i>$\det(Dg(\hat{x}))\neq0$ para toda $\hat{x}\in B\setminus D$, con $D\subset B$ un conjunto de medida
+            de Jordan cero, y
+        </i></li>
+        <li><i>$g(B)=A$</i></li>
+    </ol>
+
+    <p>
+        <i>entonces $A$ es Jordan-medible y además</i> $$\int_A f=\int_B (f\circ g)\cdot|\det(Dg)|'' $$
+    </p>
+
+    <p>
+        Son hipótesis bastante largas e incluso tal vez algo difíciles de entender a la primera, pero se puede
+        sintetizar de manera decente en el siguiente enunciado:
+    </p>
+
+    <p>
+        Si se cumple que <ul>
+            <li>$\Omega$ es Jordan-medible.</li>
+            <li>$\phi$ es de clase $C^1$ en $\Omega$.</li>
+            <li>$\phi$ es inyectiva salvo en un conjunto de medida cero.</li>
+            <li>$\det(D\phi)\neq0$ salvo en un conjunto de medida cero.</li>
+        </ul>
+        entonces si $f:\phi(\Omega)\to\mathbb{R}$ es continua, se tiene que
+        $$\int_{\phi(\Omega)} f=\int_{\Omega} (f\circ\phi)|\det (D\phi) |. $$
+    </p>
+
+    <p>
+        Este teorema no lo voy a demostrar, de hecho, es el único teorema el cual no me da pena decir que no lo voy
+        a desmostrar, pues parece ser que no es nada, pero nada fácil provarlo. De hecho, la demostración de este teorema
+        ha sido material de tesis para graduarse de la carrera de matemáticas en la Facultad de Ciencias de la UNAM. Si
+        estas interesado, checa la nota al pie de pagina de la pagina 68 del Paez de calculo integral (y por ahí ya que estas
+        tal vez lee el libro).
+    </p>
+
+
 </body>
 </html>
